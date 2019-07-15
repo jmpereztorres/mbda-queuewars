@@ -1,0 +1,18 @@
+{
+  "name": "queuewars",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "prettier": "prettier --write '{src,__{tests,mocks}__}/**/*.js'"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
+  }
+}

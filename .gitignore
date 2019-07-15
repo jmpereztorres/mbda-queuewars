@@ -1,0 +1,9 @@
+__pycache__/
+.direnv/
+.DS_Store
+*.pyc
+*.tgz
+build/
+kafka/
+node_modules/
+venv/

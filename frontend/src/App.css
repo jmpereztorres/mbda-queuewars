@@ -1,0 +1,83 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.app__grid {
+  flex: 1 1 auto;
+}
+
+.app__legend {
+  flex: 0 0 8rem;
+  margin-left: 1rem;
+}
+
+.app__legend__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.app__legend__item__cell {
+  margin-right: 0.2rem;
+}
+
+.app__legend__item__cell .cell { animation: none !important; }
+
+.app__legend__item__label {
+  font-size: 0.875rem;
+}
+
+.app__grid, .app__legend {
+  padding: 0.5rem;
+  background: #FFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+  align-content: stretch;
+}
+
+.cell {
+  width: 1em; height: 1em;
+  border: 1px solid #CCC;
+  margin: 0 2px 2px 0;
+  border-radius: 2px;
+}
+
+.cell--none { background-color: white; border-color: #CCC }
+.cell--one { background-color: #4CAF50; border-color: #4CAF50 }
+.cell--two { background-color: #FF9800; border-color: #FF9800 }
+.cell--three { background-color: #795548; border-color: #795548 }
+.cell--four { background-color: #2196F3; border-color: #2196F3 }
+.cell--five { background-color: #F44336; border-color: #F44336 }
+.cell--six { background-color: #9C27B0; border-color: #9C27B0 }
+
+@keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.cell--one,
+.cell--two,
+.cell--three,
+.cell--four,
+.cell--five,
+.cell--six {
+  animation: swirl-in-fwd 0.6s ease-out both;
+}
+
